@@ -52,7 +52,7 @@ Route::get('Sess2','Con_school@Sess2');
 //staff logout
 Route::post('StaffLogout','Con_school@StaffLogout');
 // student insert
-Route::post('Studentinsert/{staff_id}','Con_school@Studentinsert');
+Route::post('Studentinsert','Con_school@Studentinsert');
 
 
 

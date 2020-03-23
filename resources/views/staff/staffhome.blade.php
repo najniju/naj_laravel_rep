@@ -27,7 +27,7 @@
 
             <h2>New student registration</h2>
 
-    <form method="post" action="{{url('Studentinsert/'.$users->staff_id)}}" onsubmit="return myFn()">
+    <form method="post" action="{{url('Studentinsert')}}" onsubmit="return myFn()">
       @csrf
   
   <div class="form-group">
@@ -44,6 +44,11 @@
     <label for="formGroupExampleInput">Contact</label>
     <input id="student_contact" name="student_contact" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your contact no:">
     <span id="sp3"></span>
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Department</label>
+    <input readonly value="{{$users->staff_dept}}" name="student_dept" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your contact no:">
+    
   </div>
   <button name="btn" type="submit" class="btn btn-primary">Register</button>
 </form>

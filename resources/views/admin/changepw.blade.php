@@ -37,7 +37,8 @@
         @csrf
     <button style="margin: 10px  10px  10px 200px" type="submit" class="btn btn-outline-success">Home</button>
     </form>
-    
+    <a style="margin: 10px  10px  10px 200px" href="{{url('/')}}" class="badge badge-warning">Back to main menu</a>
+
   </div>
 </div>
 </div>

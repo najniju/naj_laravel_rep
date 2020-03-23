@@ -266,16 +266,15 @@ public function StaffLogout(Request $req){
     $req->session()->flush();
     return redirect('stafflogin');   
 }
-public function Studentinsert(Request $req,$id){
+//student registration
+public function Studentinsert(Request $req){
    
     $student_id=$req->student_id;
     $student_name=$req->student_name;
     $student_place=$req->student_place;
     $student_contact=$req->student_contact;
+    $student_dept=$req->student_dept;
 
-    $stdept=DB::table('staff')->where('staff_id',$id)->first();
-    $student_dept=$stdept->staff_dept;
-    echo $student_dept;
     
     DB::table('student')->insert([
     ['student_id'=>$student_id,
