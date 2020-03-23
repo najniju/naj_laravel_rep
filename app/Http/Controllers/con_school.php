@@ -179,7 +179,12 @@ public function Staffinsert(Request $req){
                 'staff_contact.unique' => 'This contact no is already registered!!! ',
                  ]);
 
-
+// validating userid uniqueness
+$this->validate($req,[
+    'user_id' => 'required|unique:adminregi'
+    ],[
+        'user_id.unique' => 'Please change your user id.This user id is already registered!!! ',
+         ]);
 
 
 
@@ -203,12 +208,7 @@ public function Staffinsert(Request $req){
         $password=$req->create_password; 
         $fk_id=$fkdata->staff_id;
 
-// validating userid uniqueness
-        $this->validate($req,[
-            'user_id' => 'required|unique:adminregi'
-            ],[
-                'user_id.unique' => 'Please change your user id.This user id is already registered!!! ',
-                 ]);
+
 
 
 //inserting to login table
