@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 
+<script src="{{asset('jscript/stafflogin.js')}}"></script>
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -29,7 +30,7 @@
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label><p style="color:red">{{session('error2')}}</p>
-    <input name="password" type="text" class="form-control" id="exampleInputPassword1">
+    <input id="password" name="password" type="text" class="form-control" id="exampleInputPassword1">
     <span id="sp2"></span>
   </div>
   
